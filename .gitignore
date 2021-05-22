@@ -1,0 +1,10 @@
+*.pyc
+*~
+__pycache__
+# sastreenv
+# /static
+# .DS_Store
+# .idea
+# /.idea
+# SASTRE/embeddings-l-model.bin
+# SASTRE/sbw_vectors.bin
