@@ -1,0 +1,28 @@
+<h1>Inicio</h1>
+{% if user.is_authenticated %}
+<h1>
+	Bienvenido al sitio, {{ user.username|capfirst }} <br>
+</h1>
+<a href="">Recordatorios</a>
+<br>
+<a href="">Crear Recordatorio</a>
+<br>
+<a href="">Recordatorios Completados</a>
+<br>
+<form action="{% url 'cerrarsesion' %}" method="post">
+	{% csrf_token %}
+	<button type="submit">Cerrar Sesión</button>
+</form>
+{% else %}
+<a href="{% url 'registro' %}">Registrarse</a>
+<br>
+<a href="{% url 'iniciarsesion' %}">Iniciar Sesión</a>
+{% endif %}
+
+
+<hr>
+
+
+
+
+{% block content %}{% endblock content %}
